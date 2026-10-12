@@ -250,7 +250,6 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fkybt"]
 
 [node name="Player" type="CharacterBody2D" unique_id=1990499625]
-scale = Vector2(3, 3)
 script = ExtResource("1_fkybt")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=978829078]

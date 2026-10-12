@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://b1e5kt6251ybb"]
+
+[ext_resource type="Texture2D" uid="uid://dv0hcb4bewecj" path="res://Assets/Free/Terrain/Terrain (16x16).png" id="1_0r486"]
+[ext_resource type="Script" uid="uid://ce17q4alq2v1o" path="res://Scripts/portal.gd" id="1_oi2tk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0r486"]
+size = Vector2(20, 22)
+
+[node name="Area2D" type="Area2D" unique_id=1713292102 groups=["player"]]
+script = ExtResource("1_oi2tk")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1091709328]
+texture = ExtResource("1_0r486")
+region_enabled = true
+region_rect = Rect2(48, 128, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=725642192]
+shape = SubResource("RectangleShape2D_0r486")
+
+[node name="Destination" type="Marker2D" parent="." unique_id=125314374]
+position = Vector2(-6, 0)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

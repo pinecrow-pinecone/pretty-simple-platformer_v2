@@ -15,9 +15,18 @@ run/main_scene="uid://1sn1gxmf3lyf"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=1264
+window/size/viewport_height=720
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
+
+[global_group]
+
+player=""
 
 [input]
 
@@ -48,5 +57,6 @@ jump={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="mobile"
